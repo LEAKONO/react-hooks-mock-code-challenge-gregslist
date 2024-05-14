@@ -1,7 +1,8 @@
+
 import React from "react";
 import Search from "./Search";
 
-function Header() {
+function Header({ searchQuery, setSearchQuery }) {
   return (
     <header>
       <h1>
@@ -10,9 +11,12 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
     </header>
   );
 }
 
 export default Header;
+
+
+
